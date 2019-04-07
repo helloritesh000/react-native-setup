@@ -1,0 +1,28 @@
+React Native Setup
+==================
+1) Download and install Node
+2) Install JDK
+3) Install Android Studio (Download and install "Android Marshmello" SDK and "SDK Tools" from SDK Manager in Androis studio)
+4) Set Env Path for SDK and android Stodio SDK
+	User Variable
+	ANDROID_HOME : C:\Users\rkumar\AppData\Local\Android\Sdk
+	
+	Path : C:\Users\rkumar\AppData\Local\Android\Sdk\platform-tools
+	
+5) Make folder -> Goto Folder -> and Install react-native-cli
+	npm install react-native-cli
+
+6) Same Folder Init React-Native Project
+	react-native init TheFoodyz
+7) Add blank File index.android.bundle in Android -> app -> src -> main -> assets
+8) Run below command
+
+	react-native bundle --platform android -
+	-dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.
+	bundle --assets-dest android/app/src/main/res
+	
+9) Connect Device with "USB Debugging" mode enabled from developer options (If developer options is not showing in settings, then click 7 times on Phone Setting->About Phone->Build Version)
+10) Check if device is showing in Powershell/cmd 
+	adb devices
+11) Execute to deploy package to mobile
+	react-native run-android
