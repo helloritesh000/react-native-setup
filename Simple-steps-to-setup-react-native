@@ -17,9 +17,7 @@ React Native Setup
 7) Add blank File index.android.bundle in Android -> app -> src -> main -> assets
 8) Run below command
 
-	react-native bundle --platform android -
-	-dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.
-	bundle --assets-dest android/app/src/main/res
+	react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
 	
 9) Connect Device with "USB Debugging" mode enabled from developer options (If developer options is not showing in settings, then click 7 times on Phone Setting->About Phone->Build Version)
 10) Check if device is showing in Powershell/cmd 
