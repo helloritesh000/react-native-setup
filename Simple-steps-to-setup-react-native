@@ -24,3 +24,5 @@ React Native Setup
 	adb devices
 11) Execute to deploy package to mobile
 	react-native run-android
+12) To clean Build run ./gradlew clean within android folder
+	then repeat step from 8 to 11.
