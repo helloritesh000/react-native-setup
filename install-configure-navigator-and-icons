@@ -1,0 +1,34 @@
+1) npm install react-native-vector-icons
+2) npm install react-native-vector-icons --> This is for icons
+    replace existing line in android/app/build.gradle for loading the Icons correctly
+    apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+3) npm install react-native-gesture-handler --> If gesture handler is not installed in node-modules
+4) "react-native link react-native-gesture-handler" run this in project folder
+5) "react-native link" --> Mainly for IOS to link various gestures to react native, run this in project folder
+5) Add below code in MainActivity.java for linking gestures in Android
+
+import com.facebook.react.ReactActivityDelegate;
+import com.facebook.react.ReactRootView;
+import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
+
+  @Override
+    protected ReactActivityDelegate createReactActivityDelegate() {
+      return new ReactActivityDelegate(this, getMainComponentName()) {
+        @Override
+        protected ReactRootView createRootView() {
+         return new RNGestureHandlerEnabledRootView(MainActivity.this);
+        }
+      };
+    }
+6) Use below code to use Icons
+  import Icon from 'react-native-vector-icons/Ionicons';
+  
+    <Icon
+        style={{ paddingLeft: 20 }}
+        onPress={() => navigation.openDrawer()}
+        name="md-menu"
+        color="#4F8EF7"
+        size={30}
+      />
+ 7) Check Navigator file how to use different navigator in this repo.
+ 
