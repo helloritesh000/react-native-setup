@@ -14,6 +14,7 @@ React Native Setup
 
 6) Same Folder Init React-Native Project
 	react-native init TheFoodyz
+	npm install --save
 7) Add blank File index.android.bundle in Android -> app -> src -> main -> assets
 8) Run below command
 
